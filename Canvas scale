@@ -1,7 +1,0 @@
-/* hey here is the code you needed and it is werry home made :)
-
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-
-ctx.scale(2, 2);
-ctx.strokeRect(5, 5, 25, 15);
