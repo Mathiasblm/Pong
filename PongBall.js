@@ -12,14 +12,6 @@ class Ball {
     move() {
         let canvas = document.getElementById("canvas");
         let context = canvas.getContext("2d");
-        /*
-        context.fillStyle = "#000000"
-        context.fillRect(
-            0, 
-            0, 
-            canvas.width, 
-            canvas.height);
-        */
         context.fillStyle = "#FFFFFF"
         context.fillRect(
             this.xpos,
