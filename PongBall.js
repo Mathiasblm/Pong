@@ -1,4 +1,5 @@
 class Ball {
+    static Dball = [];
     
     constructor(width, height, xpos, ypos, xspeed, yspeed) {
         this.width = width;
@@ -12,14 +13,7 @@ class Ball {
     move() {
         let canvas = document.getElementById("canvas");
         let context = canvas.getContext("2d");
-        /*
-        context.fillStyle = "#000000"
-        context.fillRect(
-            0, 
-            0, 
-            canvas.width, 
-            canvas.height);
-        */
+
         context.fillStyle = "#FFFFFF"
         context.fillRect(
             this.xpos,
@@ -27,15 +21,21 @@ class Ball {
             this.width,
             this.height);
         
-        if(this.xpos+this.width >= canvas.width || this.xpos+this.width <= 15) {
-            this.xspeed *= -1
-        }
-        
         if(this.ypos+this.height >= canvas.height || this.ypos+this.height <= 15) {
             this.yspeed *= -1
         }
         
         this.xpos += this.xspeed;
         this.ypos += this.yspeed;
+    }
+    
+    remove() {
+        if(this.xpos+this.width >= canvas.width) {
+            Ball.Dball.splice(0,1);
+        }
+        
+        else if (this.xpos+this.width <= 15) {
+            Ball.Dball.splice(0,1)
+        }
     }
 }
