@@ -2,7 +2,7 @@ let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 ctx.fillStyle = "black";
 ctx.fillRect(0,0, canvas.width, canvas.height);
-Ball.Dball.push(new Ball(20,20,20,20,1,1))
+Ball.Dball.push(new Ball(5,5,20,20,1,1))
 
 
 class Game {
@@ -21,7 +21,7 @@ loop() {
         canvas.height);
     
     if(Ball.Dball.length == 0) {
-        Ball.Dball.push(new Ball(20,20,20,20,1,1))
+        Ball.Dball.push(new Ball(5,5,20,20,1,1))
     }
     
     Ball.Dball[0].move();
@@ -29,15 +29,9 @@ loop() {
     }
 }
 
-let canvas = document.getElementById("canvas");
-let ctx = canvas.getContext("2d");
-ctx.fillStyle = "black";
-ctx.fillRect(0,0, canvas.width, canvas.height);
 
-
-let Dball = new Ball(20,20,20,20,1,1);
 
 function gameloop() {
     Game.instance.loop();
 }
-setInterval(gameloop,1)
+setInterval(gameloop,10)

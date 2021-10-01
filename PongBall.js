@@ -21,7 +21,7 @@ class Ball {
             this.width,
             this.height);
         
-        if(this.ypos+this.height >= canvas.height || this.ypos+this.height <= 15) {
+        if(this.ypos+this.height >= canvas.height || this.ypos+this.height <= 5) {
             this.yspeed *= -1
         }
         
@@ -34,7 +34,7 @@ class Ball {
             Ball.Dball.splice(0,1);
         }
         
-        else if (this.xpos+this.width <= 15) {
+        else if (this.xpos+this.width <= 0) {
             Ball.Dball.splice(0,1)
         }
     }
