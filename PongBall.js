@@ -21,7 +21,7 @@ class Ball {
             this.width,
             this.height);
         
-        if(this.ypos+this.height >= canvas.height || this.ypos+this.height <= 5) {
+        if(this.ypos+this.height >= canvas.height || this.ypos+this.height <= 4) {
             this.yspeed *= -1
         }
         
