@@ -4,5 +4,3 @@
 27/9: Vi fik lavet canvasset og fik bolden til at fungere sidst. Nu går vi i gang med at lave de 2 paddles som spillerne bruger.
 
 1/10: Der var en bug med move functionen for vores ball der endelig blev fixet efter en meget lang inspektion af koden. Nu er vi i fuld gang med at få paddlesne til at fungere. Mens arbejder Oscar på at lave noget layout på canvasset og scoreboardet.
-
-4/10: I denne time fik vi vores hit detection mellem paddlesne og pongballen til at virke. Nu mangler vi bare evnen til at styre paddlesne og så få lavet scoreboardsne færdigt.
