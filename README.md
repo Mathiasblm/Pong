@@ -7,4 +7,4 @@
 
 4/10: Vi fik paddlesnes hit detection til at virke i dag. Det vil sige vi kun mangler scoreboardet og move functionen for paddlesne.
 
-8/10: Nu fungerer begge paddles ligemeget hvad modstanderens input er ligenu. Dog har dette skabt nogle bugs som skal fikses.
+8/10:

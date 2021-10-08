@@ -17,23 +17,47 @@ class Player{
     
 }
 
-document.addEventListener('keydown', function(event) {
-   
-    //top
-    if(event.keyCode == 38) {
+var keys = {}
+function handleKeyPress(evt) {
+    let {keyCode, type} = evt || Event; // to deal with IE
+    let isKeyDown = (type == 'keydown');
+    keys[keyCode] = isKeyDown;
+    
+    if(isKeyDown && keys[38] && keys[87]){
         playerR.y -= 5;
-    }
-  
-    //bottom
-    else if(event.keyCode == 40) {
-        playerR.y += 5;
-    }
-    // w
-    else if(event.keyCode == 87) {
         playerL.y -= 5;
     }
-    // s
-    else if(event.keyCode == 83) {
+    
+    if(isKeyDown && keys[40] && keys[87]){
+        playerR.y += 5;
+        playerL.y -= 5;
+    }
+    
+    if(isKeyDown && keys[38] && keys[83]){
+        playerR.y -= 5;
         playerL.y += 5;
     }
-});
+    
+    if(isKeyDown && keys[40] && keys[83]){
+        playerR.y += 5;
+        playerL.y += 5;
+    }
+    
+    else if(keys[38]){
+        playerR.y -= 5;
+    }
+    
+    else if(keys[40]){
+        playerR.y += 5;
+    }
+    
+    else if(keys[87]){
+        playerL.y -= 5;
+    }
+    else if(keys[83]){
+        playerL.y += 5;
+    }
+};
+
+window.addEventListener("keyup", handleKeyPress);
+window.addEventListener("keydown", handleKeyPress);
