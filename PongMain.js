@@ -51,7 +51,13 @@ collision() {
 function gameloop() {
     Game.instance.loop();
     Game.instance.collision();
-    playerL.y += playerL.ySpeed;
-    playerR.y += playerR.ySpeed;
+    
+    if(playerL.y + playerL.ySpeed > 0 && playerL.y + playerL.ySpeed < 110) {
+        playerL.y += playerL.ySpeed;
+    }
+    
+    if(playerR.y + playerR.ySpeed > 0 && playerR.y + playerR.ySpeed < 110) {
+        playerR.y += playerR.ySpeed;
+    }
 }
 setInterval(gameloop,1)
