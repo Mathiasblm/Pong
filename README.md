@@ -7,4 +7,4 @@
 
 4/10: Vi fik paddlesnes hit detection til at virke i dag. Det vil sige vi kun mangler scoreboardet og move functionen for paddlesne.
 
-8/10:
+8/10: Nu fungerer paddlesnens movement uafhængigt af hvad den anden spillers input er. Dette har dog skabt nogle bugs der stadig ikke er fjernet.
