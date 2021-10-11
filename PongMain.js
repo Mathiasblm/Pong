@@ -52,11 +52,11 @@ function gameloop() {
     Game.instance.loop();
     Game.instance.collision();
     
-    if(playerL.y + playerL.ySpeed > 0 && playerL.y + playerL.ySpeed < 110) {
+    if(playerL.y + playerL.ySpeed > 0 && playerL.y + playerL.ySpeed < canvas.height-playerL.h) {
         playerL.y += playerL.ySpeed;
     }
     
-    if(playerR.y + playerR.ySpeed > 0 && playerR.y + playerR.ySpeed < 110) {
+    if(playerR.y + playerR.ySpeed > 0 && playerR.y + playerR.ySpeed < canvas.height-playerR.h) {
         playerR.y += playerR.ySpeed;
     }
 }
