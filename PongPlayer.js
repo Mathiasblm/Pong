@@ -1,3 +1,4 @@
+//vores paddle class
 class Player{
 
     constructor(x,y,w,h,ySpeed){
@@ -7,11 +8,9 @@ class Player{
         this.w = w;
         this.h = h;
         this.ySpeed = ySpeed;
-        
-
-
     }
-
+    
+    //draw metode
     draw(){
         let ctx = canvas.getContext("2d");
         ctx.fillStyle = "#FFFFFF";
@@ -19,9 +18,8 @@ class Player{
     }
     
 }
-// Class end
 
-
+//keydown event checker der sætter farten af spilleren
 document.addEventListener('keydown', function(event) {
    
     //top
@@ -44,10 +42,9 @@ document.addEventListener('keydown', function(event) {
 
 });
 
+//keyup event checker der resetter farten
 document.addEventListener('keyup', function(event) {
    
-  
-
     if(event.keyCode == 38) {
         playerR.ySpeed = 0;
     }

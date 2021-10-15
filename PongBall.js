@@ -1,3 +1,4 @@
+//vores ball class
 class Ball {
     static Dball = [];
     
@@ -9,7 +10,8 @@ class Ball {
         this.xspeed = xspeed;
         this.yspeed = yspeed;
     }
-    
+
+    //move metode
     move() {
         let canvas = document.getElementById("canvas");
         let context = canvas.getContext("2d");
@@ -29,13 +31,18 @@ class Ball {
         this.ypos += this.yspeed;
     }
     
+    //remove metode der også giver point
     remove() {
         if(this.xpos+this.width >= canvas.width) {
             Ball.Dball.splice(0,1);
+            pointL++
+            console.log("PlayerL: " + pointL)
         }
         
         else if (this.xpos+this.width <= 0) {
             Ball.Dball.splice(0,1)
+            pointR++
+            console.log("PlayerR: " + pointR)
         }
     }
 }

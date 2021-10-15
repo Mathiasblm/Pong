@@ -8,3 +8,7 @@
 4/10: Vi fik paddlesnes hit detection til at virke i dag. Det vil sige vi kun mangler scoreboardet og move functionen for paddlesne.
 
 8/10: Nu fungerer paddlesnens movement uafhængigt af hvad den anden spillers input er. Dette har dog skabt nogle bugs der stadig ikke er fjernet.
+
+11/10: Vi har fikset bugsne i paddlesnes movement + fået boldens yspeed til at være random vær gang den rammer en paddle for at skabe noget mere variation i spillet.
+
+15/10: Vi har lavet et basic pointsystem og endelig fået den dumme linje i midten til at virke.
