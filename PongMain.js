@@ -50,11 +50,11 @@ loop() {
     
     // mid linje (w = width, x = x akse pos, y = linjens top y pos, step = antal dashes)
     var w = 4;
-    var x = (canvas.width - w)0.5;
+    var x = (canvas.width - w)*0.5;
     var y = 0;
     var step = canvas.height/20;
         while (y < canvas.height) {
-        ctx.fillRect(x, y+step0.25, w, step*0.5); 
+        ctx.fillRect(x, y+step*0.25, w, step*0.5); 
         y += step;
     }
     ctx.restore();
